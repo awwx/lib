@@ -1,0 +1,12 @@
+--- a/ac.scm	2009-11-06 14:34:17.000000000 -0500
++++ b/ac.scm	2009-11-06 14:35:07.000000000 -0500
+@@ -1140,6 +1140,9 @@
+             (tl2))
+     (lambda ()
+       (let ((expr (read)))
++        (if (eof-object? expr)
++             (begin (newline)
++                    (exit)))
+         (if (eqv? expr ':a)
+             'done
+             (let ((val (arc-eval expr)))
