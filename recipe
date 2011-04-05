@@ -1,0 +1,99 @@
+(aw/begins-rest0
+  source "begins-rest0.arc"
+  prereq arc3.1/strings)
+
+(aw/exit-on-eof2
+  source "exit-on-eof2.patch"
+  patches arc3.1/ac
+  provides control-d-exits)
+
+(aw/erp1
+  source "erp1.arc")
+
+(aw/xloop0
+  source "xloop0.arc")
+
+(aw/equal-wrt-testing0
+  source "equal-wrt-testing0.arc")
+
+(aw/test0
+  source "test0.arc"
+  prereq aw/equal-wrt-testing0)
+
+(aw/extend0
+  source "extend0.arc"
+  prereq arc3.1/arc)
+
+(aw/defarc0
+  source "defarc0.patch"
+  patches arc3.1/ac)
+
+(aw/defarc-ac0
+  source "defarc-ac0.patch"
+  patches arc3.1/ac
+  prereq aw/defarc0)
+
+(aw/scheme0
+  source "scheme0.arc"
+  prereq (aw/extend0 aw/defarc-ac0))
+
+(aw/parameter0
+  source "parameter0.arc"
+  prereq (aw/scheme0 aw/extend0))
+
+(aw/defvar-patch1
+  source "defvar-patch1.patch"
+  patches arc3.1/ac)
+
+(aw/defvar3
+  source "defvar3.arc"
+  prereq (aw/defvar-patch1 aw/scheme0))
+
+(aw/dynamic0
+  source "dynamic0.arc"
+  prereq (aw/defvar3 aw/parameter0))
+
+(aw/implicit3
+  source "implicit3.arc"
+  prereq aw/dynamic0)
+
+(aw/homedir0
+  source "homedir0.arc"
+  prereq aw/scheme0)
+
+(aw/ret0
+  source "ret0.arc")
+
+(aw/cwd0
+  source "cwd0.arc"
+  prereq (aw/scheme0 aw/dynamic0 aw/implicit3))
+
+(aw/partition0
+  source "partition0.arc")
+
+(aw/alistcall1
+  source "alistcall1.patch"
+  patches arc3.1/ac)
+
+(aw/urlencode2
+  source "urlencode2.arc"
+  prereq aw/scheme0)
+
+(aw/re3
+  source "re3.arc"
+  prereq aw/scheme0)
+
+(aw/redef0
+  source "redef0.arc")
+
+(aw/redef0
+  source "redef0.arc")
+  
+(aw/defvar4
+  source "defvar4.arc"
+  prereq (aw/redef0 aw/defvar-patch1 aw/scheme0)
+  replaces aw/defvar3)
+
+(aw/urlencode3
+  source "urlencode3.arc"
+  prereq aw/scheme0)
