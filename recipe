@@ -122,3 +122,7 @@
 (aw/match0
   source "match0.arc"
   prereq (aw/implicit3 aw/test0 aw/ret0 aw/xloop0))
+
+(aw/defrule0
+  source "defrule0.arc"
+  prereq arc3.1/arc)
