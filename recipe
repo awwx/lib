@@ -134,3 +134,7 @@
 (aw/url0
   source "url0.arc"
   prereq (arc3.1/arc urlencode aw/redef0))
+
+(aw/readline2
+  source "readline2.arc"
+  prereq (arc3.1/arc aw/xloop0 aw/redef0))
