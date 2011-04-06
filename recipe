@@ -146,3 +146,7 @@
 (aw/between0
   source "between0.arc"
   prereq arc3.1/arc)
+
+(aw/tojson0
+  source "tojson0.arc"
+  prereq (arc3.1/arc aw/between0))
