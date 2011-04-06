@@ -138,3 +138,7 @@
 (aw/readline2
   source "readline2.arc"
   prereq (arc3.1/arc aw/xloop0 aw/redef0))
+
+(aw/parseurl0
+  source "parseurl0.arc"
+  prereq (arc3.1/arc arc3.1/strings aw/re3))
