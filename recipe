@@ -73,7 +73,8 @@
 
 (aw/alistcall1
   source "alistcall1.patch"
-  patches arc3.1/ac)
+  patches arc3.1/ac
+  prereq  aw/defarc0)
 
 (aw/urlencode2
   source "urlencode2.arc"
@@ -92,7 +93,8 @@
 (aw/defvar4
   source "defvar4.arc"
   prereq (aw/redef0 aw/defvar-patch1 aw/scheme0)
-  replaces aw/defvar3)
+  replaces aw/defvar3
+  recommended)
 
 (aw/urlencode3
   source "urlencode3.arc"
@@ -100,3 +102,7 @@
 
 (aw/al0
   source "al0.arc")
+
+(aw/implicitreq0
+  source "implicitreq0.arc"
+  prereq (arc3.1/srv aw/implicit3 aw/extend0))
