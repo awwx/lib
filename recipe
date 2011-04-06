@@ -106,3 +106,11 @@
 (aw/implicitreq0
   source "implicitreq0.arc"
   prereq (arc3.1/srv aw/implicit3 aw/extend0))
+
+(aw/srv-misc1
+  source "srv-misc1.arc"
+  prereq (arc3.1/srv aw/scheme0))
+
+(aw/srv-misc2
+  source "srv-misc2.arc"
+  prereq (arc3.1/srv aw/scheme0))
