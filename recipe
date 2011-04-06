@@ -78,7 +78,8 @@
 
 (aw/urlencode2
   source "urlencode2.arc"
-  prereq aw/scheme0)
+  prereq aw/scheme0
+  provides urlencode)
 
 (aw/re3
   source "re3.arc"
@@ -98,7 +99,8 @@
 
 (aw/urlencode3
   source "urlencode3.arc"
-  prereq aw/scheme0)
+  prereq aw/scheme0
+  provides urlencode)
 
 (aw/al0
   source "al0.arc")
@@ -126,3 +128,9 @@
 (aw/defrule0
   source "defrule0.arc"
   prereq arc3.1/arc)
+
+;; todo don't need redef if not loading arc3.1/strings
+
+(aw/url0
+  source "url0.arc"
+  prereq (arc3.1/arc urlencode aw/redef0))

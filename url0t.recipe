@@ -1,0 +1,10 @@
+https://github.com/awwx/hack/raw/master/arc3.1.recipe
+recipe
+aw/url0
+aw/test0
+
+; Even though aw/url0 can use any urlencode, the test needs
+; aw/urlencode3 to format the query arguments in the way it expects.
+
+aw/urlencode3
+url0t.arc
