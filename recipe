@@ -114,3 +114,7 @@
 (aw/srv-misc2
   source "srv-misc2.arc"
   prereq (arc3.1/srv aw/scheme0))
+
+(aw/baseop1
+  source "baseop1.arc"
+  prereq (aw/extend0 aw/implicitreq0 aw/srv-misc2))
