@@ -118,3 +118,7 @@
 (aw/baseop1
   source "baseop1.arc"
   prereq (aw/extend0 aw/implicitreq0 aw/srv-misc2))
+
+(aw/match0
+  source "match0.arc"
+  prereq (aw/implicit3 aw/test0 aw/ret0 aw/xloop0))
