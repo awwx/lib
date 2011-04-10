@@ -5,9 +5,6 @@
   (mliteral "false" nil))
 
 (def json-null ()
-  (mliternal "null"))
-
-(def json-null ()
   (mliteral "null" nil))
 
 (def json-number-char (x)
